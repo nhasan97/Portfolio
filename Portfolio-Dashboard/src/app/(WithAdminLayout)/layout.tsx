@@ -6,7 +6,7 @@ const layout = ({ children }: TChildren) => {
   return (
     <div className="bg-[#010018] relative flex flex-col lg:flex-row">
       <Sidebar />
-      <div className="flex-1 lg:ml-64 relative border">{children}</div>
+      <div className="flex-1 lg:ml-64 relative">{children}</div>
     </div>
   );
 };

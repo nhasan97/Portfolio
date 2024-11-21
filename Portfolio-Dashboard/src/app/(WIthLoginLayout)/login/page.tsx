@@ -38,10 +38,12 @@ const LoginPage = () => {
     }
   }, [isPending, isSuccess]);
 
+  //bg-[url('/assets/images/login.jpg')] bg-cover bg-center bg-no-repeat
+
   return (
-    <div className="h-screen w-full flex flex-col items-center justify-center bg-[url('/assets/images/login.jpg')] bg-cover bg-center bg-no-repeat">
+    <div className="h-screen w-full flex flex-col items-center justify-center text-[#c4c6d3] ">
       <div className="w-full sm:w-[70%] lg:w-[35%] bg-black/10 backdrop-blur-md p-10 rounded-lg">
-        <h3 className="my-2 text-2xl font-bold">Login</h3>
+        <h3 className="my-2 text-2xl  font-bold">Login</h3>
         <p className="mb-4">Welcome Back! Let&lsquo;s Get Started</p>
 
         <FXForm
@@ -61,7 +63,7 @@ const LoginPage = () => {
           </div>
 
           <Button
-            className="w-full my-3 bg-red-700 text-white"
+            className="w-full my-3 bg-[#c4c6d3] text-black"
             size="lg"
             radius="md"
             type="submit"

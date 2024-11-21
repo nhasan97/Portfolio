@@ -1,6 +1,7 @@
 import { QueryObserverResult, RefetchOptions } from "@tanstack/react-query";
 
 export interface IProject {
+  _id?: string;
   name: string;
   type: string;
   images?: string[];

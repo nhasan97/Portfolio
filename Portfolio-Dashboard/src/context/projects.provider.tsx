@@ -60,7 +60,7 @@ const ProjectsProvider = ({ children }: TChildren) => {
   );
 };
 
-export const useRecipeProvider = () => {
+export const useProjectProvider = () => {
   const context = useContext(ProjectContext);
 
   if (context === undefined) {
