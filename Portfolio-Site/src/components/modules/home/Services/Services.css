@@ -1,0 +1,28 @@
+.card::before,
+.card::after {
+  content: "";
+  position: absolute;
+  inset: -0.2rem;
+  z-index: -1;
+  background: linear-gradient(
+    var(--gradient-angle),
+    #8080f1,
+    #997bec,
+    #af76e6,
+    #c371de,
+    #d46cd5,
+    #e76ac5,
+    #f66cb5,
+    #ff70a5,
+    #ff8091,
+    #ff9382,
+    #ffa77b,
+    #f8bb7e
+  );
+  border-radius: inherit;
+  animation: rotation 5s linear infinite;
+}
+
+.card::after {
+  filter: blur(1rem);
+}

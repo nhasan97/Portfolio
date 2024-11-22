@@ -1,0 +1,39 @@
+[
+  {
+    "_id": "1",
+    "sln": "1",
+    "name": "Web Application Development",
+    "image": "https://i.ibb.co/VNLbryR/ferenc-almasi-e-Ypc-LDXHVb0-unsplash.jpg",
+    "description": "Building dynamic and interactive web applications using MERN stack.",
+    "technologies": ["MongoDB", "Express.js", "React.js", "Node.js"],
+    "features": [
+      "Responsive Design",
+      "Scalability",
+      "Security",
+      "Performance Optimization"
+    ]
+  },
+  {
+    "_id": "2",
+    "sln": "2",
+    "name": "UI/UX Development",
+    "image": "https://i.ibb.co/rmYHjdK/fotis-fotopoulos-6s-Al6a-Q4-OWI-unsplash.jpg",
+    "description": "Creating user-friendly and visually appealing interfaces using React.js.",
+    "technologies": ["React.js", "HTML", "CSS", "Tailwind CSS"],
+    "features": [
+      "Component-Based Architecture",
+      "State Management",
+      "Routing",
+      "Forms and Validation"
+    ]
+  },
+  {
+    "_id": "3",
+    "sln": "3",
+    "name": "Web Design",
+    "image": "https://i.ibb.co/xgTQfKM/istockphoto-1201166649-612x612.jpg",
+    "description": "Creating unique, visually appealing, user attracting designs for web applications.",
+    "technologies": ["Figma", "HTML", "CSS"],
+    "features": ["Attractive", "Unique", "Responsive Design"]
+  }
+]
