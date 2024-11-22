@@ -16,11 +16,6 @@ const projectSchema = new Schema<TProject, ProjectModel>(
       required: true,
     },
 
-    // thumbnail: {
-    //   type: String,
-    //   required: true,
-    // },
-
     images: {
       type: [String],
       default: [],
@@ -91,7 +86,7 @@ projectSchema.pre('save', async function (next) {
   if (doesExist) {
     throw new AppError(
       httpStatus.INTERNAL_SERVER_ERROR,
-      'Recipe already exists'
+      'Project already exists'
     );
   }
   next();

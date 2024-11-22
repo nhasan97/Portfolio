@@ -42,7 +42,7 @@ const getAllProjectsFromDB = async (
   }
   const sortQuery = filterQuery.sort(sort);
 
-  let limit = 10;
+  let limit = 1;
   let page = 1;
   let skip = 0;
   if (query?.limit) {
