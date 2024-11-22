@@ -98,7 +98,7 @@ experienceSchema.pre('save', async function (next) {
   next();
 });
 
-//checking if the project exists or not using static method
+//checking if the blog exists or not using static method
 experienceSchema.statics.doesExperienceExist = async function (expId: string) {
   return await Experience.findOne({
     _id: expId,

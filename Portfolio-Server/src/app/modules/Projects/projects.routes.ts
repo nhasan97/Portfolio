@@ -29,7 +29,7 @@ router.post(
 
 router.patch(
   '/edit-project/:id',
-  // auth(USER_ROLE.ADMIN),
+  auth(USER_ROLE.ADMIN),
   multerUpload.fields([{ name: 'projectImages' }]),
   parseBody,
   validateRequest(ProjectValidation.updateProjectValidationSchema),
