@@ -1,13 +1,11 @@
 import "../styles/globals.css";
 import { Metadata, Viewport } from "next";
-import { Link } from "@nextui-org/link";
 import clsx from "clsx";
 
 import { Providers } from "./providers";
 
 import { siteConfig } from "@/src/config/site";
 import { fontSans } from "@/src/config/fonts";
-import { Navbar } from "@/src/components/navbar";
 
 export const metadata: Metadata = {
   title: {
@@ -34,7 +32,9 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning lang="en">
-      <head />
+      <head>
+        <script src="https://kit.fontawesome.com/85eb643506.js" />
+      </head>
       <body
         className={clsx(
           "min-h-screen bg-background font-sans antialiased",
