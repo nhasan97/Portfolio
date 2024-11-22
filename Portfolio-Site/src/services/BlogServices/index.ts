@@ -3,8 +3,8 @@
 import axiosInstance from "@/src/lib/AxiosInstance";
 import { toast } from "sonner";
 
-//server action for retrieving all projects
-export const getAllProjects = async (
+//server action for retrieving all blogs
+export const getAllBlogs = async (
   searchTerm: string,
   sort: string,
   page: number,
@@ -26,7 +26,7 @@ export const getAllProjects = async (
       params.append("limit", limit.toString());
     }
 
-    const res = await axiosInstance.get(`/projects/getAllProjects?${params}`);
+    const res = await axiosInstance.get(`/blogs/getAllBlogs?${params}`);
 
     return res.data;
   } catch (error) {
@@ -35,24 +35,10 @@ export const getAllProjects = async (
   }
 };
 
-//server action for counting projects
-export const getProjectCount = async () => {
+//server action for counting blogs
+export const getBlogCount = async () => {
   try {
-    const res = await axiosInstance.get("/projects/count-projects");
-
-    return res.data;
-  } catch (error) {
-    toast.error("Failed to fetch data: " + error);
-    throw new Error("Failed to fetch data");
-  }
-};
-
-//server action for retrieving single projects
-export const getSingleProject = async (projectId: string) => {
-  try {
-    const res = await axiosInstance.get(
-      `/projects/getSingleProject/${projectId}`
-    );
+    const res = await axiosInstance.get("/blogs/count-blogs");
 
     return res.data;
   } catch (error) {
