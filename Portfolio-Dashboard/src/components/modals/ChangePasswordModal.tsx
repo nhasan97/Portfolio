@@ -4,12 +4,12 @@ import FXForm from "../form/FXForm";
 import FXInput from "../form/FXInput";
 import { Button } from "@nextui-org/button";
 import { FieldValues, SubmitHandler } from "react-hook-form";
-import { useChangePassword } from "@/src/hooks/user.hook";
 import { logout } from "@/src/services/AuthService";
 import { useRouter } from "next/navigation";
 import { useUser } from "@/src/context/user.provider";
 import { zodResolver } from "@hookform/resolvers/zod";
 import changePasswordValidationSchema from "@/src/schemas/changePassword.schema";
+import { useChangePassword } from "@/src/hooks/user.hook";
 
 const ChangePasswordModal = () => {
   const router = useRouter();
