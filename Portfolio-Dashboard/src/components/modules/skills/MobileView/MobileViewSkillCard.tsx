@@ -1,19 +1,20 @@
 "use client";
 
-import ExperienceDetailsModal from "@/src/components/modals/ExperienceDetailsModal";
-import { IExperience } from "@/src/types/experience.type";
+import { useUser } from "@/src/context/user.provider";
 import { Button } from "@nextui-org/button";
 import { Image } from "@nextui-org/image";
 import { QueryObserverResult, RefetchOptions } from "@tanstack/react-query";
 import { toast } from "sonner";
 import "../../../../styles/Project.css";
+import SkillDetailsModal from "@/src/components/modals/SkillDetailsModal";
+import { ISkill } from "@/src/types/skill.type";
 
-const MobileViewExperienceCard = ({
-  experience,
-  refetchExperiences,
+const MobileViewSkillCard = ({
+  skill,
+  refetchSkills,
 }: {
-  experience: IExperience;
-  refetchExperiences: (
+  skill: ISkill;
+  refetchSkills: (
     options?: RefetchOptions
   ) => Promise<QueryObserverResult<any, Error>>;
 }) => {
@@ -53,7 +54,7 @@ const MobileViewExperienceCard = ({
         <div className="flex items-center gap-3">
           <div className="text-small text-default-500 relative">
             <Image
-              src={experience?.companyLogo}
+              src={skill?.icon}
               alt="nextui logo"
               width={60}
               height={60}
@@ -64,24 +65,19 @@ const MobileViewExperienceCard = ({
           </div>
 
           <div className="flex flex-col">
-            <p className="text-base text-[#c4c6d3]">
-              {experience?.companyName}
-            </p>
+            <p className="text-base text-[#c4c6d3]">{skill?.skillName}</p>
 
             <div className="flex items-center gap-1 text-xs text-default-500">
-              <p>{experience?.designation}</p>
+              <p>Proficiency Level | {skill?.proficiencyLevel}</p>
             </div>
             <div className="flex items-center gap-1 text-xs text-default-500">
-              <p>
-                {experience?.jobEnvironmentType} |{" "}
-                {experience.employmentNatureType}
-              </p>
+              <p>{skill?.experienceYears} Years of experience</p>
             </div>
           </div>
         </div>
 
         <div className="w-full flex items-center gap-3">
-          <ExperienceDetailsModal />
+          <SkillDetailsModal />
 
           <Button isIconOnly size="sm" className="bg-[#c4c6d3] text-[#0a0b29]">
             <i className="fa-solid fa-file-pen" />
@@ -95,4 +91,4 @@ const MobileViewExperienceCard = ({
   );
 };
 
-export default MobileViewExperienceCard;
+export default MobileViewSkillCard;
