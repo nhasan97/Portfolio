@@ -1,4 +1,10 @@
-const Title = ({ title, align }) => {
+const Title = ({
+  title,
+  align,
+}: {
+  title: { mainTitle?: string; subTitle1?: string; subTitle2?: string };
+  align: string;
+}) => {
   const { mainTitle, subTitle1, subTitle2 } = title;
   return (
     <div
