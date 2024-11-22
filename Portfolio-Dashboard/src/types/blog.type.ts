@@ -1,4 +1,5 @@
 import { QueryObserverResult, RefetchOptions } from "@tanstack/react-query";
+import { IDate } from "./date.type";
 
 //declaring type for blog social links
 export interface IBlogAuthorSocialLinks {
@@ -31,6 +32,8 @@ export interface IBlog {
   references: IBlogReference[];
   likes: number;
   isFeatured: boolean;
+  createdAt?: IDate;
+  isDeleted?: boolean;
 }
 
 //declaring type for blog context
